@@ -9,10 +9,13 @@ const ingredients = [
 
 const repetaVozmiNaRobotuEl = document.querySelector("ul");
 
+const newLi = [];
+
 ingredients.forEach((item) => {
   const lishkaEl = document.createElement("li");
   lishkaEl.classList.add("item");
   lishkaEl.textContent = item;
-  repetaVozmiNaRobotuEl.append(lishkaEl);
   console.log(item);
+  newLi.push(lishkaEl);
 });
+repetaVozmiNaRobotuEl.append(...newLi);
